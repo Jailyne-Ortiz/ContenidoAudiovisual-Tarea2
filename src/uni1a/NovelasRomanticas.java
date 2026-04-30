@@ -1,24 +1,24 @@
 package uni1a;
 
-public class Pelicula extends ContenidoAudiovisual {
+public class NovelasRomanticas extends ContenidoAudiovisual {
 
-    private String estudio;
+    private String autor;
     private Actor actor;
 
-    public Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio, Actor actor) {
+    public NovelasRomanticas(String titulo, int duracionEnMinutos, String genero, String autor, Actor actor) {
         super(titulo, duracionEnMinutos, genero);
-        this.estudio = estudio;
+        this.autor = autor;
         this.actor = actor;
     }
 
     @Override
     public void mostrarDetalles() {
-        System.out.println("Detalles de la película:");
+        System.out.println("Detalles de la novela:");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
-        System.out.println("Estudio: " + estudio);
+        System.out.println("Autor: " + autor);
         System.out.println("Actor: " + (actor != null ? actor.getNombre() : "N/A"));
         System.out.println("----------------------");
     }
